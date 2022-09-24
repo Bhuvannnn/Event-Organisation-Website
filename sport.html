@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sports</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+	<script type="text/javascript" src="sportscript.js"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<style type="text/css">
+		table{
+			color: #3fb0ac;
+			border: 1px solid;
+			background-color: rgb(245,245,245);
+			padding: 20px;
+			font-size: 150%;
+			width: 500px;
+			height: 600px;
+		}
+
+		input, select, textarea, button{
+			background-color: rgb(245,245,245);
+			border: 1px solid;
+			border-color: #3fb0ac;
+			padding: 5px;
+			color: #3fb0ac;
+			font-size: 70%;
+		}
+
+
+	</style>
+</head>
+<body>
+	<div class="mydiv">
+		<h1 style="color: #3fb0ac">Event Organization</h1>
+		<p style="color: #3fb0ac"><b>Easiest and Fastest way to organize your events!</b></p>
+	</div>
+
+	<div>
+		<ul>
+			<li><a href="homepg.html">Home</a></li>
+			<li><a href="decoration.html" target="_parent">Decoration</a></li>
+			<li><a href="gallery.html" target="_parent">Gallery</a></li>
+			<li><a href="contact.html" target="_parent">Contact Us</a></li>
+		</ul>
+	</div>
+	<hr>
+	<h1 style="color: #3fb0ac; background-color: rgb(245,245,245); padding: 10px" align="center">Sports Event</h1>
+	<h1 style="color: #3fb0ac; margin-left: 10%; display: inline;">Please fill the following details:</h1>
+	<h1 style="color: #3fb0ac; display: inline; margin-left: 20%">Final Bill:</h1>
+	<br><br>
+	<form ng-app="mymodule" ng-controller="fcontroller">
+		<table style="float: left; margin-left: 10%;">
+			<tr>
+				<td><label>Name: </label></td>
+				<td><input type="text" ng-model="name"></td>
+			</tr>
+			<tr>
+				<td><label>Email: </label></td>
+				<td><input type="text" ng-model="email"></td>
+			</tr>
+			<tr>
+				<td><label>Contact number: </label></td>
+				<td><input type="text" ng-model="cnum"></td>
+			</tr>
+			<tr>
+				<td><label>Address: </label></td>
+				<td><textarea rows="5" cols="20" ng-model="address"></textarea></td>
+			</tr>
+			<tr>
+				<td>Total no. of matches (1000Rs per match)</td>
+				<td><input type="text"  ng-model="n" id="tm"></td>
+			</tr>
+			<tr>
+				<td>Enter date of Event:</td>
+				<td><input type="date" ng-model="date"></td>
+			</tr>
+			<tr>
+				<td>Select Venue:</td>
+				<td>
+					<select>
+						<option id="v1">Venue 1 - Rs 1000</option>
+						<option id="v2">Venue 2 - Rs 1500</option>
+						<option id="v3">Venue 3 - Rs 2000</option>
+					</select>
+					
+				</td>
+			</tr>
+			<tr>
+				<td><button onclick="fn()">Generate Bill</button></td>
+			</tr>
+		</table>
+		<table style="float: right; margin-right: 10%;">
+			<tr>
+				<td><label>Name: </label></td>
+				<td>{{name}}</td>
+			</tr>
+			<tr>
+				<td>Email: </td>
+				<td>{{email}}</td>
+			</tr>
+			<tr>
+				<td>Contact num: </td>
+				<td>{{cnum}}</td>
+			</tr>
+			<tr>
+				<td>Address: </td>
+				<td>{{address}}</td>
+			</tr>
+			<tr>
+				<td>Event date: </td>
+				<td>{{date| date}}</td>
+			</tr>
+			<tr>
+				<td>Price for matches: </td>
+				<td>1000Rs X {{n}}= </td>
+				<td>Rs {{1000*n | number}}</td>
+			</tr>
+			<tr>
+				<td>Venue Rate: </td>
+				<td id="p1"></td>
+				
+			</tr>
+			<tr><td><hr style="border-color: #3fb0ac"></td><td><hr style="border-color: #3fb0ac"></td></tr>
+			<tr>
+				<td>Total Charges: </td>
+				<td id="p2"></td>
+			</tr>
+			<tr><td><hr style="border-color: #3fb0ac"></td><td><hr style="border-color: #3fb0ac"></td></tr>
+			<tr>
+				
+				<td><button onclick="location.href='confirm.html'">Confirm Booking</button></td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Decoration</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="decorationscript.js"></script>
+	<style type="text/css">
+		table{
+			border: 1px solid #3fb0ac;
+			font-size: 150%;
+			padding: 20px;
+			width: 600px;
+			
+			color: #3fb0ac;
+		}
+
+		input,button{
+			color: rgb(255,255,255);
+			background-color: #3fb0ac;
+			font-size: 18px;
+			padding: 5px;
+			border-color: #3fb0ac;
+
+		}
+		hr{
+			border-color: #3fb0ac;
+		}
+	</style>
+</head>
+<body>
+	
+
+	<div class="mydiv">
+		<h1 style="color: #3fb0ac">Event Organization</h1>
+		<p style="color: #3fb0ac"><b>Easiest and Fastest way to organize your events!</b></p>
+	</div>
+
+	<div>
+		<ul>
+			<li><a href="homepg.html">Home</a></li>
+			<li><a href="decoration.html" target="_parent">Decoration</a></li>
+			<li><a href="gallery.html" target="_parent">Gallery</a></li>
+			<li><a href="contact.html" target="_parent">Contact Us</a></li>
+			<li><a href="about.html">About Usg</a></li>
+			
+		</ul>
+	</div>
+	<hr>
+	<br><br>
+	<h1 style="margin-left: 32%; color: #3fb0ac">Decoration:</h1>
+	<div style="border: 2px solid #3fb0ac; width: 500px; margin-left: 32%; color: #3fb0ac" align="center">
+		<p style="font-size: 150%"><b>Basic Decoration:</b></p>
+		<img src="basicdec.jpeg" width="150">
+		
+		<p>
+			- 200 Ballons with ribbons<br>
+			- 1 Paper Strip Banner<br>
+			- Color of ballon chosen by costumer<br>
+			<b>PRICE - Rs 2000</b>
+		</p>
+		<input type="button" value="ADD" onclick="fn1()"><br><br>
+	</div>
+	<br><br>
+	<div style="border: 2px solid #3fb0ac; width: 500px; margin-left: 32%; color: #3fb0ac" align="center">
+		<p style="font-size: 150%"><b>Theme Decoration:</b></p>
+		<img src="themedec.jpeg" width="150">
+		
+		<p>
+			- 450 Ballons with ribbons<br>
+			- 1 Ballon Entrance arch<br>
+			- 1 Banner(Thermocol/Foil Ballon) and 4 Theme cutouts<br>
+			- 1 Big Ballon filled with confetti and candy<br>
+			<b>PRICE - Rs 4000</b>
+		</p>
+		<input type="button" value="ADD" onclick="fn2()"><br><br>
+	</div>
+
+	<br><br>
+	<h1 style="margin-left: 32%; color: #3fb0ac">Add-ons</h1>
+	<div style="border: 2px solid #3fb0ac; width: 500px;  margin-left: 32%; color: #3fb0ac" align="center">
+		<p style="font-size: 150%"><b>Party popper:</b></p>
+		<img src="pp.jpeg" width="150">
+		
+		<p>
+			<b>PRICE - Rs 100</b>
+		</p>
+		<p>Quantity: </p>
+		<input type="text" id="q1">
+		<input type="button" value="ADD" onclick="fn3()"><br><br>
+	</div>
+	<br><br>
+
+	<div style="border: 2px solid #3fb0ac; width: 500px;  margin-left: 32%; color: #3fb0ac" align="center">
+		<p style="font-size: 150%"><b>100 heart shaped ballons</b></p>
+		<img src="hsb.jpeg" width="150">
+		
+		<p>
+			<b>PRICE - Rs 600</b>
+		</p>
+		<p>Quantity: </p>
+		<input type="text" id="q2">
+		<input type="button" value="ADD" onclick="fn4()"><br><br>
+	</div>
+	<br><br>
+
+	<div style="border: 2px solid #3fb0ac; width: 500px;  margin-left: 32%; color: #3fb0ac" align="center">
+		<p style="font-size: 150%"><b>Thermocol Banner</b></p>
+		<img src="tb.jpeg" width="150">
+		
+		<p>
+			<b>PRICE - Rs 450</b>
+		</p>
+		<p>Quantity: </p>
+		<input type="text" id="q3">
+		<input type="button" value="ADD" onclick="fn5()"><br><br>
+	</div>
+	<br><br>
+
+
+
+
+	<h1 style="margin-left: 32%; color: #3fb0ac">Cart:</h1>
+	<table align="center">
+		<thead style="color: red">
+			<tr>
+				<td>Name</td><td>Price</td><td>Quantity</td><td>Total</td><td>Remove</td>
+			</tr>
+			<tr><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td></tr>
+		</thead>
+		<tbody id="cart">
+			
+		</tbody>
+		<tfoot id="cart2">
+			<tr><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td></tr>
+		</tfoot>
+	</table>
+	<p align="center">
+	
+	<button onclick="location.href='confirm.html'">Checkout</button>
+	</p>
+</body>
+</html>
